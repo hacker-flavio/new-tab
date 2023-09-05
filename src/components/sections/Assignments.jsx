@@ -5,7 +5,9 @@ import "./Assignments.css";
 function Assignments() {
   const [courses, setCourses] = useState([]);
   const getCourses = async () => {
-    const response = await axios.get("http://localhost:4000/courses");
+    const response = await axios.get("http://localhost:4000/courses", {
+      withCredentials: true, // This instructs Axios to include cookies in the request
+    });
     console.log(response.data.courses);
     setCourses(response.data.courses);
   };

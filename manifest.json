@@ -7,6 +7,15 @@
     "default_popup": "js/index.html",
     "default_title": "React Chrome Extension"
   },
+  "permissions": [
+    "tabs",
+    "bookmarks",
+    "activeTab",
+    "scripting",
+    "cookies",
+    "nativeMessaging"
+  ],
+  "host_permissions": ["http://localhost:4000/*", "http://localhost:8080/*"],
   "chrome_url_overrides": {
     "newtab": "js/index.html"
   }
