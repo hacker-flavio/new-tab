@@ -2,7 +2,7 @@
   font-size: 26px;
   margin-left: 15px;
   border-bottom: solid;
-  width: 400px;
+  /* width: 400px; */
   margin-bottom: 10px;
   padding-bottom: 5px;
 }
@@ -13,7 +13,7 @@
   backdrop-filter: blur(10px);
   padding-top: 10px;
   padding-bottom: 20px;
-  width: 445px;
+  width: 495px;
   padding-left: 2.5px;
 }
 .courseContainer {
@@ -21,10 +21,11 @@
   flex-direction: column;
   overflow-y: scroll;
   overflow-x: hidden;
+  height: 500px;
   width: fit-content;
 }
 .courseDiv {
-  width: 400px;
+  width: 450px;
   height: auto;
   padding: 5px;
   margin-right: 5px;
