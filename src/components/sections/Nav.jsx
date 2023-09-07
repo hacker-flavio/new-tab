@@ -50,7 +50,7 @@ function Nav() {
       </a>
       <a href="https://github.com/" className="ahref">
         <img
-          src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+          src="https://qph.cf2.quoracdn.net/main-qimg-729a22aba98d1235fdce4883accaf81e"
           alt=""
           className="image"
         />

@@ -32,8 +32,34 @@
   margin-left: 15px;
   background-color: #00000085;
 }
+.courseInnerDiv {
+  padding: 5px;
+}
 .courseTitle {
   font-size: 24px;
+  display: flex;
+}
+.courseName {
+  flex-grow: 1;
+  align-items: center;
+  display: flex;
+}
+.arrowContainer {
+  width: fit-content;
+  background-color: #c7c7c7;
+  height: fit-content;
+  padding: 5px;
+  border-radius: 10px;
+}
+.arrowImg {
+  width: 25px;
+  display: block;
+}
+.arrowUp {
+  transform: rotate(180deg);
+}
+.collaps {
+  height: 0px;
 }
 
 /* Define the scrollbar width and track color */

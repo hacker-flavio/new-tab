@@ -1,0 +1,67 @@
+.gearContainer {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #3aa0c56e;
+  padding: 1.5px;
+  border: solid #00000070;
+  border-radius: 15px;
+}
+.gear {
+  width: 45px;
+  display: block;
+}
+.gearContainer:hover {
+  background-color: #3aa0c5;
+  cursor: pointer;
+}
+
+.outerDiv {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.outerSettingsDiv {
+  position: absolute;
+  bottom: 20px;
+  right: 95px;
+  border: solid;
+  height: 225px;
+  width: 175px;
+  border-radius: 15px;
+  background-color: #5f5f5f;
+}
+.innerSettingsDiv {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 99;
+  position: absolute;
+  border-radius: 13px;
+  background: linear-gradient(130deg, rgb(7 5 7) 0%, rgb(0 105 94) 100%);
+}
+.settingsDiv {
+  padding: 10px;
+}
+.settingSquare {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-color: #006359;
+  border: solid;
+  transform: rotate(45deg);
+  bottom: 5px;
+  right: -10px;
+  border-radius: 5px;
+  z-index: 1;
+}
+.settingsOptionDiv {
+  padding-bottom: 5px;
+  border-bottom: solid #0083ff;
+}
+.settingsText {
+  font-size: 18px;
+}
+.settingsInput {
+  width: -webkit-fill-available;
+}

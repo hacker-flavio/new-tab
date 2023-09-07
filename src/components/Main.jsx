@@ -1,27 +1,62 @@
 import React, { useState, useEffect } from "react";
 import Nav from "./sections/Nav";
 import Memes from "./sections/Memes";
-import Assignments from "./sections/Assignments";
+import Assignments from "./sections/Assignments/Assignments.jsx";
 import "../App.css";
+import Gear from "./settings/Gear";
 
 const images = require.context("../images/", true);
 const imageList = images.keys().map((image) => images(image));
+const checkBoxState = JSON.parse(localStorage.getItem("myCheckBox"));
+const transitionTime = localStorage.getItem("transitionTime");
 
 function Main() {
   const [imageIndex, setImageIndex] = useState(0);
-  const [selectedTab, setSelectedTab] = useState("reddit");
 
+  const [selectedTab, setSelectedTab] = useState("reddit");
+  const [myCheckBox, setMyCheckBox] = useState(checkBoxState || false);
+  const [transitionTimeState, setTransitionTimeState] = useState(
+    transitionTime || 10000
+  );
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     // Calculate the next image index in a sequential order
+  //     const nextImageIndex = (imageIndex + 1) % imageList.length;
+  //     setImageIndex(nextImageIndex);
+  //   }, 10000);
+
+  //   // Clear the interval on component unmount
+  //   return () => clearInterval(interval);
+  // }, [imageIndex]);
   useEffect(() => {
     const interval = setInterval(() => {
-      // Calculate the next image index in a sequential order
-      const nextImageIndex = (imageIndex + 1) % imageList.length;
-      setImageIndex(nextImageIndex);
-    }, 10000);
+      if (myCheckBox) {
+        // Calculate the next image index in a sequential order
+        const nextImageIndex = (imageIndex + 1) % imageList.length;
+        setImageIndex(nextImageIndex);
+      }
+    }, transitionTimeState);
 
     // Clear the interval on component unmount
     return () => clearInterval(interval);
-  }, [imageIndex]);
+  }, [imageIndex, myCheckBox]);
 
+  useEffect(() => {
+    console.log(checkBoxState);
+  }, [checkBoxState]);
+
+  const handleCheckBox = () => {
+    console.log("handleCheckBox");
+    setMyCheckBox(!myCheckBox);
+    localStorage.setItem("myCheckBox", JSON.stringify(!myCheckBox));
+  };
+
+  const handleTransitionTime = (value) => {
+    console.log("handleTransitionTime");
+    setTransitionTimeState(value);
+    localStorage.setItem("transitionTime", value);
+  };
   return (
     <div
       className={`App transition-container`}
@@ -58,9 +93,16 @@ function Main() {
         {selectedTab == "reddit" ? (
           <Memes />
         ) : selectedTab == "assignments" ? (
-          <Assignments />
+          <Assignments imageURL={imageList[imageIndex].default} />
         ) : null}
       </div>
+      <Gear
+        myCheckBox={myCheckBox}
+        setMyCheckBox={setMyCheckBox}
+        handleCheckBox={handleCheckBox}
+        transitionTimeState={transitionTimeState}
+        handleTransitionTime={handleTransitionTime}
+      />
     </div>
   );
 }

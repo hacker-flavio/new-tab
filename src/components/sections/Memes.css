@@ -10,7 +10,7 @@
   border: solid;
   border-radius: 15px;
   background-color: #0000008f;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(4px);
   padding-top: 10px;
   padding-bottom: 20px;
   width: 445px;
