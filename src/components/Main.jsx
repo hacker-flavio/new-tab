@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Nav from "./sections/Nav";
 import Memes from "./sections/Memes";
 import Assignments from "./sections/Assignments/Assignments.jsx";
+import YoutubeVideos from "./sections/YoutubeVideos/YoutubeVideos";
 import "../App.css";
 import Gear from "./settings/Gear";
 
@@ -87,6 +88,15 @@ function Main() {
             >
               Assignments
             </div>
+            <div
+              className={
+                selectedTab === "youtubeVideos" ? "selected" : "notSelected"
+              }
+              onClick={(e) => setSelectedTab(e.target.id)}
+              id="youtubeVideos"
+            >
+              Youtube Videos
+            </div>
           </div>
         </div>
 
@@ -94,6 +104,8 @@ function Main() {
           <Memes />
         ) : selectedTab == "assignments" ? (
           <Assignments imageURL={imageList[imageIndex].default} />
+        ) : selectedTab == "youtubeVideos" ? (
+          <YoutubeVideos />
         ) : null}
       </div>
       <Gear
