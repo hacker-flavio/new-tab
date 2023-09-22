@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
 }
 /* Add this CSS class */
 .transition-container {
@@ -22,7 +23,7 @@
   justify-content: center;
   height: fit-content;
   margin-bottom: 20px;
-  border: solid black;
+  border: solid;
   padding: 5px;
   border-radius: 15px;
   background-color: #0000008f;
