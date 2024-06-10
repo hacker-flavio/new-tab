@@ -17,6 +17,11 @@
   flex-direction: column;
   align-items: center;
 }
+
+.customButton {
+  width: 165px !important;
+  color: #90fff8;
+}
 .selectTab {
   display: flex;
   align-items: center;

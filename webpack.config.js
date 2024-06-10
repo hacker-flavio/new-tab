@@ -110,7 +110,7 @@ function getHtmlPlugins(chunks) {
   return chunks.map(
     (chunk) =>
       new HTMLPlugin({
-        title: "React extension",
+        title: "New Tab",
         filename: `${chunk}.html`,
         chunks: [chunk],
       })

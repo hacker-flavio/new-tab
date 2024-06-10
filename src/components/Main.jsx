@@ -58,6 +58,10 @@ function Main() {
     setTransitionTimeState(value);
     localStorage.setItem("transitionTime", value);
   };
+
+  const openTab = (url) => {
+    window.open(url);
+  };
   return (
     <div
       className={`App transition-container`}
@@ -96,6 +100,27 @@ function Main() {
               id="youtubeVideos"
             >
               Youtube Videos
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="selectTab">
+            <div
+              className={`
+                customButton ${
+                  selectedTab === "youtubeVideos" ? "selected" : "notSelected"
+                }
+                `}
+              onClick={() =>
+                openTab(
+                  "https://docs.google.com/document/d/1Xy1EyqVmuiGzRCrDOFsvX9okyX5e4dyToeFC_vBAr-U/edit"
+                )
+              }
+              id="googleDocs"
+            >
+              <div style={{ color: "red", fontWeight: "bold" }}>(notes)</div>{" "}
+              google docs
             </div>
           </div>
         </div>
