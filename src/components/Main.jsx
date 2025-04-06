@@ -133,6 +133,7 @@ function Main() {
           <YoutubeVideos />
         ) : null}
       </div>
+
       <Gear
         myCheckBox={myCheckBox}
         setMyCheckBox={setMyCheckBox}

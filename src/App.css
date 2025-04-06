@@ -46,6 +46,7 @@
   justify-content: center;
   border-bottom: solid;
 }
+
 .notSelected {
   font-size: 18px;
   cursor: pointer;

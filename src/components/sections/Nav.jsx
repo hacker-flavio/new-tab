@@ -36,7 +36,7 @@ function Nav() {
       </a>
       <a href="https://catcourses.ucmerced.edu/courses/" className="ahref">
         <img
-          src="https://itg.wfu.edu/wp-content/uploads/canvas-logo.png"
+          src="https://www.wabash.edu/images2/technology/canvas.png"
           alt=""
           className="image"
         />
